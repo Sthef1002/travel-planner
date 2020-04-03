@@ -1,13 +1,13 @@
 import React from 'react';
+import Form from './components/Form'
 
 function App() {
   return (
     <div>
-      {/* <SearchBar /> */}
+      <Form />
       {/* <Map /> */}
       {/* <MapCard /> */}
       {/* <CardList /> */}
-      {/* <DateInput />  */}
       {/* <DateList /> */}
       {/* <DateModal /> */}
       {/* <Logo /> */}
