@@ -1,10 +1,9 @@
 import React from 'react';
-import Form from './components/Form'
 
 function App() {
   return (
     <div>
-      <Form />
+      {/* <Form /> */}
       {/* <Map /> */}
       {/* <MapCard /> */}
       {/* <CardList /> */}
