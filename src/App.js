@@ -1,10 +1,15 @@
 import React from 'react';
+import Form from './components/Form'
+import Search from './components/Search'
+import Map from './components/Map'
+
+
 
 function App() {
   return (
     <div>
       <Form />
-      {/* <Map /> */}
+      <Map />
       {/* <MapCard /> */}
       {/* <CardList /> */}
       {/* <DateList /> */}
@@ -12,6 +17,7 @@ function App() {
       {/* <Logo /> */}
       {/* <NavBar /> */}
       {/* <Details /> */}
+      <Search />
     </div>
   );
 }
