@@ -1,5 +1,6 @@
 import React from "react";
 import {GoogleMap, withScriptjs, withGoogleMap, Marker} from "react-google-maps";
+import './Map.css'
 
 function GMap() {
     return (
@@ -19,7 +20,7 @@ const MapWrapped = withScriptjs(withGoogleMap(GMap));
 
 export default function Map() {
     return (
-        <div style={{ width: "100vw", height: "100vh" }}>
+        <div id='gmap'>
           <MapWrapped
             googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyD1DrDBUd6GNL2EIBCxK-K0OjkTny8kbuA`}
             loadingElement={<div style={{ height: `100%` }} />}
