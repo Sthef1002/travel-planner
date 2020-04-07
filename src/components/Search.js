@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class Search extends React.Component {
+export default class Search extends React.Component {
 
   constructor(props) {
     super(props);
@@ -11,7 +11,7 @@ export class Search extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.onSubmit(this.state.value);
+    this.props.history.push(`/location/${event.target.venueType.value}`)
   }
 
   handleChange(event) {
@@ -21,7 +21,7 @@ export class Search extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <input id="venueType" onChange={this.handleChange} value={this.state.value} placeholder="search for venues" />
+        <input id="venueType" onChange={this.handleChange} value={this.state.value} placeholder="search for location" />
         <input type="submit" value="Submit" />
       </form>
     );
