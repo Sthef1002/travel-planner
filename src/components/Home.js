@@ -10,11 +10,11 @@ const home = () => {
         <div>
             <Jumbotron fluid id='home-back'>
                 <Container>
-                    <h1>For those who seek</h1>
+                    <h1 id='title'>For those who seek</h1>
                     <h2>Find places to eat, drink, shop, or visit in any city in the world, add them to your trip 
         planner and get ready to explore.</h2>
                     <Form />
-                    <p id='copyright'>Travel Planner © 2020 All rights reserved.</p>
+                    <p id='copyright' >Travel Planner © 2020 All rights reserved.</p>
                 </Container>
             </Jumbotron>
             <Form />

@@ -9,9 +9,19 @@
 h1, h2, p {
     font-family: Arial;
     text-align: center;
-    color: white;
+    color: #ffffff;
+}
+
+h1{
+    font-size: 40px;
+    font-family: arial black;
+}
+
+h2 {
+    font-size: 22px;
 }
 
 #copyright {
-    color: red;
+    font-size: 14px;
+    color: #D63930;
 }
