@@ -4,6 +4,7 @@ import Search from './components/Search';
 import Map from './components/Map';
 import { Route, BrowserRouter } from 'react-router-dom';
 import Results from './components/Results';
+import Logo from './components/Logo';
 
 
 
@@ -22,7 +23,7 @@ function App() {
           {/* <CardList /> */}
           {/* <DateList /> */}
           {/* <DateModal /> */}
-          {/* <Logo /> */}
+          <Logo />
           {/* <NavBar /> */}
           {/* <Details /> */}
         </div>
