@@ -1,0 +1,27 @@
+#home-back{
+    background-image: url(../Background.png);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+h1, h2, p {
+    font-family: Arial;
+    text-align: center;
+    color: #ffffff;
+}
+
+h1{
+    font-size: 40px;
+    font-family: arial black;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+#copyright {
+    font-size: 14px;
+    color: #D63930;
+}

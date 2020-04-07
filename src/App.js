@@ -1,12 +1,13 @@
+import { Route, BrowserRouter } from 'react-router-dom';
 import React, { useState } from 'react';
 import Form from './components/Form';
 import Search from './components/Search';
 import Map from './components/Map';
-import { Route, BrowserRouter } from 'react-router-dom';
 import Results from './components/Results';
 import Logo from './components/Logo';
+import Home from "./components/Home";
 
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Logo />
           {/* <NavBar /> */}
           {/* <Details /> */}
+          <Home />
         </div>
       </BrowserRouter>
     </div>
