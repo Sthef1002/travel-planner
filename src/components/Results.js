@@ -11,7 +11,7 @@ export default class Results extends Component {
 
     componentDidMount() {
        let query = this.props.match.params.query
-        const venuesEndpoint = 'https://api.foursquare.com/v2/venues/search';
+        const venuesEndpoint = 'https://api.foursquare.com/v2/venues/search?';
     
         const params = {
           client_id: "QFWFOQW13VWR2SYCHO3SLUWQDDDDRAC3ZA1RSH2BOY5LBVOG",
@@ -28,16 +28,17 @@ export default class Results extends Component {
           })
             .then(response => response.json())
             .then(response => {
+              console.log("Susccess: ", response)
               this.setState({venues: response.response.venues}); //Set the components state
             })
-            .catch(error => console.log(error))
+            .catch(error => console.log("There is an error: "+error))
       }
 
     render() {
         return (
             <div>
                 <Route path='/location/:query' render={props => <Form {...props} venues={this.state.venues}/>} />
-                <Route path='/location/:query' component={Map} />
+                <Route path='/location/:query' render={props => <Map {...props} venues={this.state.venues}/>} />
             </div>
         )
     }
