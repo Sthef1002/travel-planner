@@ -5,6 +5,7 @@ import Map from './components/Map';
 import { Route, BrowserRouter } from 'react-router-dom';
 import Results from './components/Results';
 import Logo from './components/Logo';
+import Home from "./components/Home";
 
 
 
@@ -26,6 +27,7 @@ function App() {
           <Logo />
           {/* <NavBar /> */}
           {/* <Details /> */}
+          <Home />
         </div>
       </BrowserRouter>
     </div>
