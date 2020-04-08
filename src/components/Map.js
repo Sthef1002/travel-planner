@@ -12,9 +12,7 @@ function drawMarkers(venues) {
             lat: venue.location.lat, lng: venue.location.lng}}
             >
               {/* <InfoWindow>
-
                   <h1>{venue.name}</h1>
-
               </InfoWindow> */}
             </Marker>
       ))
