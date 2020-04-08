@@ -22,7 +22,7 @@ export default class Search extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <input id="venueType" onChange={this.handleChange} value={this.state.value} placeholder="search for location" />
-        <input type="submit" value="Submit" />
+        <input type="submit" value="GO!" />
       </form>
     );
   }

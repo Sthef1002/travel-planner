@@ -22,7 +22,6 @@ function App() {
           {/* <CardList /> */}
           {/* <DateList /> */}
           {/* <DateModal /> */}
-          <Logo />
           {/* <NavBar /> */}
           {/* <Details /> */}
           <Home />
