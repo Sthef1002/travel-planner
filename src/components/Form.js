@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
 // import axios from 'axios';
-=======
->>>>>>> ec779714855e7f958fdf9b2b297b73946412e77b
 
 class Form extends Component {
 
