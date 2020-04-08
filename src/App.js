@@ -4,7 +4,6 @@ import Search from './components/Search';
 import Results from './components/Results';
 import Logo from './components/Logo';
 import Home from "./components/Home";
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
