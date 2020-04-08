@@ -3,6 +3,8 @@
     background-size: cover;
     width: 100vw;
     height: 100vh;
+    padding-top: 178px;
+    margin: 0px;
 
 }
 
@@ -15,13 +17,21 @@ h1, h2, p {
 h1{
     font-size: 40px;
     font-family: arial black;
+    margin-top: 15px;
+
 }
 
 h2 {
     font-size: 22px;
 }
 
+#subTitle {
+    margin-bottom: 50px;
+
+}
+
 #copyright {
     font-size: 14px;
     color: #D63930;
+    margin-top: 434px;
 }
