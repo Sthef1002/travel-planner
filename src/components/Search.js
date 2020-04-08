@@ -11,7 +11,7 @@ export default class Search extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.history.push(`/location/${event.target.venueType.value}`)
+    this.props.history.push(`/location/${event.target.venueCity.value}`)
   }
 
   handleChange(event) {
@@ -21,8 +21,8 @@ export default class Search extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <input id="venueType" onChange={this.handleChange} value={this.state.value} placeholder="search for location" />
-        <input type="submit" value="Submit" />
+        <input id="venueCity" onChange={this.handleChange} value={this.state.value} placeholder="search for location" />
+        <input type="submit" value="GO!" />
       </form>
     );
   }

@@ -1,8 +1,6 @@
 import { Route, BrowserRouter } from 'react-router-dom';
-import React, { useState } from 'react';
-import Form from './components/Form';
+import React from 'react'; 
 import Search from './components/Search';
-import Map from './components/Map';
 import Results from './components/Results';
 import Logo from './components/Logo';
 import Home from "./components/Home";
@@ -24,7 +22,6 @@ function App() {
           {/* <CardList /> */}
           {/* <DateList /> */}
           {/* <DateModal /> */}
-          <Logo />
           {/* <NavBar /> */}
           {/* <Details /> */}
           <Home />
