@@ -1,14 +1,22 @@
 import React from "react";
-import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoBox} from "react-google-maps";
+import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from "react-google-maps";
 import './Map.css'
 
 
 function drawMarkers(venues) {
   return(
     venues.map ( venue => (
-       <Marker 
-          position={{
-          lat: venue.location.lat, lng: venue.location.lng}}/>
+
+        <Marker 
+            position={{
+            lat: venue.location.lat, lng: venue.location.lng}}
+            >
+              {/* <InfoWindow>
+
+                  <h1>{venue.name}</h1>
+
+              </InfoWindow> */}
+            </Marker>
       ))
   )
 }
