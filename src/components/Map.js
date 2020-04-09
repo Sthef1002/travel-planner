@@ -1,6 +1,7 @@
-import React, {useState} from "react";
+import React, {useState, Fragment} from "react";
 import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from "react-google-maps";
 import './Map.css'
+import'./CardMap.css'
 
 
 const MarketWithInfo = ({venue}) => {
@@ -15,7 +16,19 @@ const MarketWithInfo = ({venue}) => {
               visible={isVisible} 
               hidden={!isVisible}
               onClick={ () => setIsVisible(!isVisible)}>
-                <div>{venue.name}</div>
+                <Fragment>
+                  <div id='name-map'>
+                  {venue.name}
+                  </div>
+                  <div id='cat-map'>
+                  {venue.categories[0].name}
+                  </div>
+                  <div id='img-map'>
+                  {/* {venue.categories[0].icon.prefix+suffix}   */}
+                  </div>
+                </Fragment>
+                
+                
             </InfoWindow> 
       </Marker>
   )
@@ -30,7 +43,8 @@ function GMap(props) {
         >
           { 
             props.venues.map( venue => (
-              <MarketWithInfo venue={venue} key={venue.name}/>
+              <MarketWithInfo 
+              venue={venue} key={venue.name}/>
             ))
           }        
         </GoogleMap>
