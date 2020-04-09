@@ -4,13 +4,10 @@ import Home from './components/Home';
 import Results from './components/Results';
 import Logo from './components/Logo';
 import 'bootstrap/dist/css/bootstrap.min.css';
-​
-​
+
 function App() {
-​
-​
-​
-  return (
+
+ return (
     <div>
       <BrowserRouter>
         <div>
@@ -27,5 +24,5 @@ function App() {
     </div>
   );
 }
-​
+
 export default App;

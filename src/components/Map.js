@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from "react-google-maps";
 import './Map.css'
-​
-​
+
+
 const MarketWithInfo = ({venue}) => {
   const [isVisible, setIsVisible] = useState(false);
   return(
-​
+
       <Marker 
           position={{lat: venue.location.lat, lng: venue.location.lng}}
           onClick={ () => setIsVisible(!isVisible)}
@@ -20,7 +20,7 @@ const MarketWithInfo = ({venue}) => {
       </Marker>
   )
 }
-​
+
 function GMap(props) {
     console.log(props) 
     return (
@@ -36,9 +36,9 @@ function GMap(props) {
         </GoogleMap>
     ); 
 }
-​
+
 const MapWrapped = withScriptjs(withGoogleMap(GMap));
-​
+
 export default function Map(props) {
     return (
         <div id='gmap'>

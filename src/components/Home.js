@@ -6,8 +6,8 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 import Search from './Search';
 import { Route } from 'react-router-dom'
-​
-​
+
+
 const home = () => {
     return (
         <div>
@@ -25,5 +25,5 @@ const home = () => {
         </div>
     );
 }
-​
+
 export default home;
