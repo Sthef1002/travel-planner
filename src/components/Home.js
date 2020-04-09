@@ -1,6 +1,5 @@
 import React from 'react';
 import Form from './Form';
-import Logo from './Logo';
 import './Home.css';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
