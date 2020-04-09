@@ -1,7 +1,7 @@
 import React, {useState, Fragment} from "react";
 import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from "react-google-maps";
-import './Map.css'
-import'./CardMap.css'
+import './Map.css';
+import'./CardMap.css';
 
 
 const MarketWithInfo = ({venue}) => {
@@ -24,7 +24,11 @@ const MarketWithInfo = ({venue}) => {
                   {venue.categories[0].name}
                   </div>
                   <div id='img-map'>
-                  {/* {venue.categories[0].icon.prefix+suffix}   */}
+                  {/* <img 
+                      alt={recipe.meals.strMeal} 
+                      id='picture-dish'
+                      src={recipe.meals.strMealThumb} 
+                    /> */}
                   </div>
                 </Fragment>
                 
@@ -44,7 +48,7 @@ function GMap(props) {
           { 
             props.venues.map( venue => (
               <MarketWithInfo 
-              venue={venue} key={venue.name}/>
+              venue={venue} key={venue.name} />
             ))
           }        
         </GoogleMap>
@@ -63,6 +67,7 @@ export default function Map(props) {
             mapElement={<div style={{ height: `100%` }} />}
             venues={props.venues}
           />
+          
         </div>
       );
     }
