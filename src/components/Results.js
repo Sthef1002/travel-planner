@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import Form from './Form'
 import Map from './Map'
 import { Route } from 'react-router-dom';
-
+​
 export default class Results extends Component {
-
+​
     state = {
         venues: []
     }
-
+​
     componentDidMount() {
        let query = this.props.match.params.query
         const venuesEndpoint = 'https://api.foursquare.com/v2/venues/search?';
@@ -33,7 +33,7 @@ export default class Results extends Component {
             })
             .catch(error => console.log("There is an error: "+error))
       }
-
+​
     render() {
         return (
             <div>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
-
+​
 class Form extends Component {
-
+​
   constructor() {
     super();
     this.state = {
@@ -11,12 +11,12 @@ class Form extends Component {
       lng: 0
     };
   }
-
+​
   componentDidMount() {
      
   }
-
-
+​
+​
   render() {
     return (
       <div>
@@ -33,5 +33,5 @@ class Form extends Component {
     );
   }
 }
-
+​
 export default Form;

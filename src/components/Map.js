@@ -1,24 +1,26 @@
-import React from "react";
+import React, {useState} from "react";
 import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from "react-google-maps";
 import './Map.css'
-
-
-function drawMarkers(venues) {
+​
+​
+const MarketWithInfo = ({venue}) => {
+  const [isVisible, setIsVisible] = useState(false);
   return(
-    venues.map ( venue => (
-
-        <Marker 
-            position={{
-            lat: venue.location.lat, lng: venue.location.lng}}
-            >
-              {/* <InfoWindow>
-                  <h1>{venue.name}</h1>
-              </InfoWindow> */}
-            </Marker>
-      ))
+​
+      <Marker 
+          position={{lat: venue.location.lat, lng: venue.location.lng}}
+          onClick={ () => setIsVisible(!isVisible)}
+          >
+            <InfoWindow 
+              visible={isVisible} 
+              hidden={!isVisible}
+              onClick={ () => setIsVisible(!isVisible)}>
+                <div>{venue.name}</div>
+            </InfoWindow> 
+      </Marker>
   )
 }
-
+​
 function GMap(props) {
     console.log(props) 
     return (
@@ -26,13 +28,17 @@ function GMap(props) {
         defaultZoom={10} 
         defaultCenter={{lat: 25.761681, lng: -80.191788}}
         >
-          { drawMarkers(props.venues) }        
+          { 
+            props.venues.map( venue => (
+              <MarketWithInfo venue={venue} key={venue.name}/>
+            ))
+          }        
         </GoogleMap>
     ); 
 }
-
+​
 const MapWrapped = withScriptjs(withGoogleMap(GMap));
-
+​
 export default function Map(props) {
     return (
         <div id='gmap'>
