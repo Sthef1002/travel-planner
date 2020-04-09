@@ -11,7 +11,7 @@ export default class Search extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.history.push(`/location/${event.target.value}`)
+    this.props.history.push(`/location/${event.target.venueCity.value}`)
   }
 
   handleChange(event) {
