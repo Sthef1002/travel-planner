@@ -1,8 +1,6 @@
 import React, {useState, Fragment} from "react";
 import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from "react-google-maps";
 import './Map.css';
-// import'./CardMap.css';
-
 
 const MarketWithInfo = ({venue, handleChange}) => {
   const prefix = venue.categories[0].icon.prefix
