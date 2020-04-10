@@ -15,6 +15,7 @@ import funr from "./NavBar/funr.png"
 import breakfastg from "./NavBar/breakfastg.png"
 import breakfastr from "./NavBar/breakfastr.png"
 
+
 class Food extends React.Component {
   render(){
     return (
@@ -22,7 +23,16 @@ class Food extends React.Component {
         <HoverImage
           src={foodg}
           hoverSrc={foodr}
-          style = {{width:40, height:40, marginRight:20,  marginLeft: 1275}}
+          style = {{
+            width:35, 
+            height:35, 
+            marginRight:20,  
+            marginLeft: 1275, 
+            padding: 5, 
+            border: '1px solid white', 
+            borderRadius: 5,
+            boxShadow: '0px 2px 6px #00000045'
+          }}
         />
       </div>
     )
@@ -36,7 +46,15 @@ class Coffee extends React.Component {
         <HoverImage
           src={coffeeg}
           hoverSrc={coffeer}
-          style = {{width:40, height:40, marginRight:20}}
+          style = {{
+            width:35, 
+            height:35, 
+            marginRight:20,  
+            padding: 5, 
+            border: '1px solid white', 
+            borderRadius: 5,
+            boxShadow: '0px 2px 6px #00000045'
+          }}
         />
       </div>
     )
@@ -50,7 +68,15 @@ class Nightlife extends React.Component {
         <HoverImage
           src={nightg}
           hoverSrc={nightr}
-          style = {{width:40, height:40, marginRight: 20}}
+          style = {{
+            width:35, 
+            height:35, 
+            marginRight:20,  
+            padding: 5, 
+            border: '1px solid white', 
+            borderRadius: 5,
+            boxShadow: '0px 2px 6px #00000045'
+          }}
         />
       </div>
     )
@@ -60,11 +86,19 @@ class Nightlife extends React.Component {
 class Fun extends React.Component {
   render(){
     return (
-      <div>
+      <div> 
         <HoverImage
           src={fung}
           hoverSrc={funr}
-          style = {{width:40, height:40, marginRight: 20}}
+          style = {{
+            width:35, 
+            height:35, 
+            marginRight:20,  
+            padding: 5, 
+            border: '1px solid white', 
+            borderRadius: 5,
+            boxShadow: '0px 2px 6px #00000045'
+          }}
         />
       </div>
     )
@@ -78,7 +112,15 @@ class Shopping extends React.Component {
           <HoverImage
             src={bagg}
             hoverSrc={bagr}
-            style = {{width:40, height:40, marginRight: 20}}
+            style = {{
+              width:35, 
+              height:35, 
+              marginRight:20,  
+              padding: 5, 
+              border: '1px solid white', 
+              borderRadius: 5,
+              boxShadow: '0px 2px 6px #00000045'
+            }}
           />
         </div>
       )
@@ -92,7 +134,15 @@ class Shopping extends React.Component {
           <HoverImage
             src={breakfastg}
             hoverSrc={breakfastr}
-            style = {{width:40, height:40, marginRight: 20}}
+            style = {{
+              width:35, 
+              height:35, 
+              marginRight:20,  
+              padding: 5, 
+              border: '1px solid white', 
+              borderRadius: 5,
+              boxShadow: '0px 2px 6px #00000045'
+            }}
           />
         </div>
       )
