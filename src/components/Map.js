@@ -5,35 +5,55 @@ import'./CardMap.css';
 
 
 const MarketWithInfo = ({venue}) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const prefix = venue.categories[0].icon.prefix
+  const suffix = venue.categories[0].icon.suffix
+  const imageSize = '200x200'
+  const [isShowing, setIsShowing] = useState(false)
+  const [ showModal, setShowModal ] = useState(false)
+
+
   return(
 
       <Marker 
           position={{lat: venue.location.lat, lng: venue.location.lng}}
-          onClick={ () => setIsVisible(!isVisible)}
+          onClick={() => setIsShowing(true)}
           >
-            <InfoWindow 
-              visible={isVisible} 
-              hidden={!isVisible}
-              onClick={ () => setIsVisible(!isVisible)}>
-                <Fragment>
-                  <div id='name-map'>
-                  {venue.name}
-                  </div>
-                  <div id='cat-map'>
-                  {venue.categories[0].name}
-                  </div>
-                  <div id='img-map'>
-                  {/* <img 
-                      alt={recipe.meals.strMeal} 
-                      id='picture-dish'
-                      src={recipe.meals.strMealThumb} 
-                    /> */}
-                  </div>
-                </Fragment>
-                
-                
-            </InfoWindow> 
+            {
+              isShowing &&
+                <InfoWindow 
+                // visible={isVisible} 
+                >
+                  <Fragment>
+                    <div id='name-map'>
+                      {venue.name}
+                    </div>
+                    <div id='cat-map'>
+                      {venue.categories[0].name}
+                    </div>
+                    <div id='img-map'>
+                      <img 
+                      // src={prefix+imageSize+suffix} alt='Venue foto'
+                      src='https://picsum.photos/200/200' alt='Venue foto'
+                      />
+                    </div>
+                    <div>
+                    
+                      <button id='details' onClick={() => { setShowModal(true)}}>
+                          Show details
+                      </button>
+
+                    </div>
+                  </Fragment>
+                  
+                  
+              </InfoWindow> 
+            }
+              {
+                showModal &&
+                <div>
+                  Some Details
+                </div>
+              }
       </Marker>
   )
 }
