@@ -11,7 +11,7 @@ import NavBar from './NavBar';
 const home = () => {
     return (
         <div>
-            <NavBar />
+            <NavBar style={{ color: `none`}}/>
             <Jumbotron fluid id='home-back'>
                 <Container>
                     <h1 id='title'>For those who seek</h1>

@@ -14,8 +14,8 @@ export default class Results extends Component {
         const venuesEndpoint = 'https://api.foursquare.com/v2/venues/search?';
     
         const params = {
-          client_id: "QFWFOQW13VWR2SYCHO3SLUWQDDDDRAC3ZA1RSH2BOY5LBVOG",
-          client_secret: "OEBLZFQVFD1M3UTY4GCI4M42DWXC14COGEW0F3LGWJZ4ST2Z",
+          client_id: "PMHC2WA1VCBHVYOPPSJ0QSBYTLRF4PNJ04OWVWV0PZJ0QFIR",
+          client_secret: "CULSZZ44YAEBOWBFGPB4BF5ISRXXSNYR0EE3JV3CNE2ZWHV0",
           limit: 20, //The max number of venues to load
           query: query, //The type of venues we want to query
           v: '20220403', //The version of the API.
