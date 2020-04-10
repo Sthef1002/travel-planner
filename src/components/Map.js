@@ -1,8 +1,6 @@
 import React, {useState, Fragment} from "react";
 import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from "react-google-maps";
 import './Map.css';
-// import'./CardMap.css';
-
 
 const MarketWithInfo = ({venue}) => {
   const prefix = venue.categories[0].icon.prefix
@@ -50,7 +48,7 @@ const MarketWithInfo = ({venue}) => {
               {
                 showModal &&
                 <div>
-                  Some Details
+                  {/* <Details /> */}
                 </div>
               }
       </Marker>
