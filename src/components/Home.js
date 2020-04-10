@@ -4,16 +4,16 @@ import './Home.css';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 import Search from './Search';
-import { Route } from 'react-router-dom'
-import NavBar from './NavBar';
+import { Route } from 'react-router-dom';
+import Logo from './Logo/Logo';
 
 
-const home = () => {
+const Home = () => {
     return (
         <div>
-            <NavBar style={{ color: `none`}}/>
             <Jumbotron fluid id='home-back'>
-                <Container>
+            <Logo />
+                <Container id='container'>
                     <h1 id='title'>For those who seek</h1>
                     <h2 id='subTitle'>Find places to eat, drink, shop, or visit in any city in the world, add them to your trip
                     planner and get ready to explore.</h2>
@@ -26,4 +26,4 @@ const home = () => {
     );
 }
 
-export default home;
+export default Home;
