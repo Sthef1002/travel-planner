@@ -1,5 +1,4 @@
 import React from 'react';
-import Form from './Form';
 import './Home.css';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
@@ -8,7 +7,7 @@ import { Route } from 'react-router-dom'
 import NavBar from './NavBar';
 
 
-const home = () => {
+const Home = () => {
     return (
         <div>
             <NavBar style={{ color: `none`}}/>
@@ -17,7 +16,6 @@ const home = () => {
                     <h1 id='title'>For those who seek</h1>
                     <h2 id='subTitle'>Find places to eat, drink, shop, or visit in any city in the world, add them to your trip
                     planner and get ready to explore.</h2>
-                    <Form />
                     <Route exact path="/" component={Search} />
                     <p id='copyright' >Travel Planner © 2020 All rights reserved.</p>
                 </Container>
@@ -26,4 +24,4 @@ const home = () => {
     );
 }
 
-export default home;
+export default Home;

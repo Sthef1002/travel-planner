@@ -4,24 +4,23 @@ import './Map.css';
 // import'./CardMap.css';
 
 
-const MarketWithInfo = ({venue}) => {
+const MarketWithInfo = ({venue, handleChange}) => {
   const prefix = venue.categories[0].icon.prefix
   const suffix = venue.categories[0].icon.suffix
   const imageSize = '230x100'
   const [isShowing, setIsShowing] = useState(false)
-  const [ showModal, setShowModal ] = useState(false)
 
 
   return(
 
-      <Marker 
+      <Marker
           position={{lat: venue.location.lat, lng: venue.location.lng}}
           onClick={() => setIsShowing(true)}
           >
             {
               isShowing &&
-                <InfoWindow 
-                // visible={isVisible} 
+                <InfoWindow
+                  onCloseClick={()=>setIsShowing(false)}
                 >
                   <Fragment>
                     <div id='name-map'>
@@ -31,47 +30,42 @@ const MarketWithInfo = ({venue}) => {
                       {venue.categories[0].name}
                     </div>
                     <div id='img-map'>
-                      <img 
+                      <img
                       // src={prefix+imageSize+suffix} alt='Venue foto'
                       src='https://picsum.photos/230/100' alt='Venue foto'
                       />
                     </div>
                     <div>
-                      <button id='det-button' onClick={() => { setShowModal(true)}}>
+                      <button id='det-button' onClick={() => { handleChange(venue) }}>
                           Show details
                       </button>
 
                     </div>
                   </Fragment>
-                  
-                  
-              </InfoWindow> 
+              </InfoWindow>
             }
-              {
-                showModal &&
-                <div>
-                  Some Details
-                </div>
-              }
       </Marker>
   )
 }
 
 function GMap(props) {
-    console.log(props) 
+    console.log(props)
     return (
-        <GoogleMap 
-        defaultZoom={10} 
+        <GoogleMap
+        defaultZoom={10}
         defaultCenter={{lat: 25.761681, lng: -80.191788}}
         >
-          { 
+          {
             props.venues.map( venue => (
-              <MarketWithInfo 
-              venue={venue} key={venue.name} />
+              <MarketWithInfo
+                venue={venue}
+                key={venue.name}
+                handleChange={props.handleChange}
+              />
             ))
-          }        
+          }
         </GoogleMap>
-    ); 
+    );
 }
 
 const MapWrapped = withScriptjs(withGoogleMap(GMap));
@@ -85,8 +79,9 @@ export default function Map(props) {
             containerElement={<div style={{ height: `100%` }} />}
             mapElement={<div style={{ height: `100%` }} />}
             venues={props.venues}
+            handleChange={props.handleChange}
           />
-          
+
         </div>
       );
     }
