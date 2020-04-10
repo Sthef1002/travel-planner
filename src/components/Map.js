@@ -1,13 +1,13 @@
 import React, {useState, Fragment} from "react";
 import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from "react-google-maps";
 import './Map.css';
-import'./CardMap.css';
+// import'./CardMap.css';
 
 
 const MarketWithInfo = ({venue}) => {
   const prefix = venue.categories[0].icon.prefix
   const suffix = venue.categories[0].icon.suffix
-  const imageSize = '200x200'
+  const imageSize = '230x100'
   const [isShowing, setIsShowing] = useState(false)
   const [ showModal, setShowModal ] = useState(false)
 
@@ -33,12 +33,11 @@ const MarketWithInfo = ({venue}) => {
                     <div id='img-map'>
                       <img 
                       // src={prefix+imageSize+suffix} alt='Venue foto'
-                      src='https://picsum.photos/200/200' alt='Venue foto'
+                      src='https://picsum.photos/230/100' alt='Venue foto'
                       />
                     </div>
                     <div>
-                    
-                      <button id='details' onClick={() => { setShowModal(true)}}>
+                      <button id='det-button' onClick={() => { setShowModal(true)}}>
                           Show details
                       </button>
 
