@@ -17,7 +17,6 @@ function App() {
         <div>
           <Route exact path='/' component={Home} />
           <Route path='/location/:query' component={Results} />
-          {/* <MapCard /> */}
           {/* <CardList /> */}
           {/* <DateList /> */}
           {/* <DateModal /> */}

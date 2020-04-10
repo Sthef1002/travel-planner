@@ -4,3 +4,54 @@
     margin-left: 37vw;
     margin-top: 7vh;
 }
+
+/* this section is the cards on the map */
+
+#name-map {
+    text-align: left;
+    font: Bold 18px Arial;
+    color: #000000;
+    margin-top: 2px;
+}
+#cat-map{
+    text-align: left;
+    font: Regular 16px Arial;
+    color: #717171;
+    margin-top: 3px;
+}
+
+.gm-style-iw{
+    padding: 0px;
+    max-width: 654px;
+    max-height: 251px;
+    width: 262px;
+}
+
+.gm-style-iw-d {
+    padding-right: 12px;
+    padding-bottom: 12px;
+}
+
+#img-map {
+    margin-top: 5px;
+}
+
+#det-button{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 6px #00000033;
+    border-radius: 5px;
+    opacity: 1;
+    margin-top: 20px;
+    height: 26px;
+    width: 100px;
+    border-color: white;
+    margin-left: 130px;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.gm-ui-hover-effect{
+   padding-top: 5px!important;
+   margin-right: 5px!important;
+   
+}
