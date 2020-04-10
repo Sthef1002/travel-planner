@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Form extends Component {
+class SelectionList extends Component {
 
   constructor() {
     super();
@@ -12,7 +12,7 @@ class Form extends Component {
   }
 
   componentDidMount() {
-     
+
   }
 
 
@@ -33,4 +33,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default SelectionList;
