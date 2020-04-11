@@ -22,8 +22,11 @@ export default class Search extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <input id="venueCity" onChange={this.handleChange} value={this.state.query} placeholder="search for location" />
+        <div id='inputButton'>
+        <input id="venueCity" onChange={this.handleChange} value={this.state.query} placeholder="Search for location" />
         <input id='button' type="submit" value="GO!" />
+        </div>
+
       </form>
     );
   }

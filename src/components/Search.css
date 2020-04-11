@@ -1,30 +1,39 @@
 form{
     display: flex;
     align-items: center;
+    padding: 0;
+
+}
+
+#inputButton {
+    margin: auto;
 }
 
 #venueCity {
-    width: 450px;
-    height: 48px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #DDDDDD;
+    background: rgba(255,255,255,0.7);
+    border: 3px solid white;
+    padding: 1em;
     border-radius: 6px;
-    text-align: left;
-    font: Regular 16px/18px Arial;
     letter-spacing: 0px;
     color: #707070;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-right: 15px;
-
+    width: 350px;
+    height: 40px;
+    justify-content: center;
+    position: center;
+    font: Regular 16px/18px Arial;
 }
 
 #button {
-    width: 88px;
-    height: 48px;
-    background: #D63930 0% 0% no-repeat padding-box;
+    width: 70px;
+    height: 40px;
+    background: #D63930 0% 0% no-repeat;
     border-radius: 5px;
     color: white;
     font: Bold 16px/18px Arial;
+    padding: 0;
+    margin: 0.10em 0.2em;
+    cursor: pointer;
+    margin-left: 10px;
+    justify-content: center;
 }
 
