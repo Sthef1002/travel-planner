@@ -27,7 +27,7 @@ class Food extends React.Component {
             width:35, 
             height:35, 
             marginRight:20,  
-            marginLeft: 1275, 
+            marginLeft: 1200, 
             padding: 5, 
             border: '1px solid white', 
             borderRadius: 5,
