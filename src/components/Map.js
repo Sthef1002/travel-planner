@@ -36,7 +36,7 @@ const MarkerWithInfo = ({venue, handleChange}) => {
                     <div>
                       <button
                         id='det-button'
-                        onClick={() => { handleChange(venue) }}
+                        onClick={() => { handleChange(venue.id) }}
                       >
                         Show details
                       </button>

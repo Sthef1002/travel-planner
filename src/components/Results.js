@@ -10,23 +10,29 @@ export default class Results extends Component {
     state = {
         venues: [],
         selectedVenues: [],
-        venueDetail: {},
-        venueId: ''
+        venueDetails: {},
     }
 
-    getDetails = value => {
-      console.log(value)
-    }
-
-    handleChange = value => {
-      this.setState({venueId: value})
+    handleChange = venueId => {
+      const params = {
+          client_id: "PMHC2WA1VCBHVYOPPSJ0QSBYTLRF4PNJ04OWVWV0PZJ0QFIR",
+          client_secret: "CULSZZ44YAEBOWBFGPB4BF5ISRXXSNYR0EE3JV3CNE2ZWHV0",
+          v: '20220403',
+      }
+      fetch(`https://api.foursquare.com/v2/venues/${venueId}?` + new URLSearchParams(params))
+        .then(res => res.json())
+        .then(data => {
+          alert(data.response.venue.name)
+          this.setState({venueDetails: data.response.venue})
+        })
+        .catch(error => alert(error))
       this.props.history.push(`/location/${this.props.match.params.query}/modal`)
     }
 
     changeSelections = (value, type='add') => {
       switch (type) {
         case 'add':
-          this.setState({ selectedVenues: [value, ...this.state.venueDetail] })
+          this.setState({ selectedVenues: [value, ...this.state.selectedVenues] })
           break
       }
     }
@@ -62,13 +68,13 @@ export default class Results extends Component {
               <Switch>
                 <Route path='/location/:query/modal'>
                   <Details
-                    venueDetail={this.state.venueDetail}
+                    venueDetails={this.state.venueDetails}
                     changeSelections={this.changeSelections}
                   />
                 </Route>
                 <Route path='/location/:query' render={props => <SelectionList {...props} selectedVenues={this.state.selectedVenues}/>} />
               </Switch>
-              <Route path='/location/:query' render={props => <Map {...props} venues={this.state.venues} handleChange={this.handleChange} getDetails={this.getDetails} />} />
+              <Route path='/location/:query' render={props => <Map {...props} venues={this.state.venues} handleChange={this.handleChange} />} />
             </div>
         )
     }
