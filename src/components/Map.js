@@ -2,7 +2,7 @@ import React, {useState, Fragment} from "react";
 import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from "react-google-maps";
 import './Map.css';
 
-const MarketWithInfo = ({venue, handleChange}) => {
+const MarkerWithInfo = ({venue, handleChange}) => {
   const prefix = venue.categories[0].icon.prefix
   const suffix = venue.categories[0].icon.suffix
   const imageSize = '230x100'
@@ -34,8 +34,11 @@ const MarketWithInfo = ({venue, handleChange}) => {
                       />
                     </div>
                     <div>
-                      <button id='det-button' onClick={() => { handleChange(venue) }}>
-                          Show details
+                      <button
+                        id='det-button'
+                        onClick={() => { handleChange(venue) }}
+                      >
+                        Show details
                       </button>
 
                     </div>
@@ -47,7 +50,6 @@ const MarketWithInfo = ({venue, handleChange}) => {
 }
 
 function GMap(props) {
-    console.log(props)
     return (
         <GoogleMap
         defaultZoom={10}
@@ -55,7 +57,7 @@ function GMap(props) {
         >
           {
             props.venues.map( venue => (
-              <MarketWithInfo
+              <MarkerWithInfo
                 venue={venue}
                 key={venue.name}
                 handleChange={props.handleChange}

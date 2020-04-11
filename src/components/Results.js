@@ -10,18 +10,23 @@ export default class Results extends Component {
     state = {
         venues: [],
         selectedVenues: [],
-        venueDetail: {}
+        venueDetail: {},
+        venueId: ''
+    }
+
+    getDetails = value => {
+      console.log(value)
     }
 
     handleChange = value => {
-      this.setState({venueDetail: value})
+      this.setState({venueId: value})
       this.props.history.push(`/location/${this.props.match.params.query}/modal`)
     }
 
     changeSelections = (value, type='add') => {
       switch (type) {
         case 'add':
-          this.setState({ venueDetail: [value, ...this.state.venueDetail] })
+          this.setState({ selectedVenues: [value, ...this.state.venueDetail] })
           break
       }
     }
@@ -63,7 +68,7 @@ export default class Results extends Component {
                 </Route>
                 <Route path='/location/:query' render={props => <SelectionList {...props} selectedVenues={this.state.selectedVenues}/>} />
               </Switch>
-              <Route path='/location/:query' render={props => <Map {...props} venues={this.state.venues} handleChange={this.handleChange} />} />
+              <Route path='/location/:query' render={props => <Map {...props} venues={this.state.venues} handleChange={this.handleChange} getDetails={this.getDetails} />} />
             </div>
         )
     }
