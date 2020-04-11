@@ -18,7 +18,6 @@ function App() {
         {/* <CardList /> */}
         {/* <DateList /> */}
         {/* <DateModal /> */}
-        {/* <Details /> */}
       </div>
     </BrowserRouter>
  
