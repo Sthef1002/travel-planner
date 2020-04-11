@@ -1,15 +1,16 @@
 #home-back{
     background-image: url(../Background.png);
     background-size: cover;
-    /* width: 100vw;
-    height: 100vh; */
+    width: 100vw;
+    height: 100vh;
+    padding: 15px;
+    margin: 0px;
 }
 
 #container {
     padding-top: 178px;
     margin: 0px;
     width: 100vw;
-    height: 100vh;
     margin: auto;
 }
 
@@ -39,4 +40,10 @@ h2 {
     font-size: 14px;
     color: #D63930;
     margin-top: 434px;
+    height: 10px;
+    margin-bottom: 0px;
+}
+
+#logo {
+    margin-left: 15px;
 }
