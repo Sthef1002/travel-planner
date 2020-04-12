@@ -2,40 +2,41 @@ import React, { Component, Fragment } from 'react'
 import './Details.css'
 
 export default class Details extends Component {
-    
+
 
     render() {
+
         const venue = { categories: [] }
+        const {venueDetails} = this.props
         return (
 
-            <Fragment id='modal'>
+            <section id='modal'>
+                <button
+                  onClick={() => this.props.changeSelections(this.props.venueDetails)}
+                >
+                  Add to list
+                </button>
                 <div id='venue-img'>
-                    <img
-                    // src={prefix+imageSize+suffix} alt='Venue foto'
-                    src='https://picsum.photos/230/100' alt='Venue foto'
-                    />
+                   {/* {venueDetail.picture} */}
                 </div>
                 <div id='venue-name'>
-                    {/* {venue.name} */}
-                    Restaurant name
+                    {venueDetails.name}
                 </div>
                 <div id='venue-cat'>
-                    {/* {venue.categories[0].name} */}
-                    Seafood
+                    {venueDetails.name}
                 </div>
                 <div id='venue-det'>
-                    Central Park is the 843-acre green heart of Manhattan and is maintained by the Central Park Conservancy. It was designed in the 19th century by Frederick Law Olmsted and Calvert Vaux as an urban escape for New Yorkers, and now receives over 40 million visits per year
+                    {/* Central Park is the 843-acre green heart of Manhattan and is maintained by the Central Park Conservancy. It was designed in the 19th century by Frederick Law Olmsted and Calvert Vaux as an urban escape for New Yorkers, and now receives over 40 million visits per year */}
                 </div>
                 <div>
-                    Address
-                    {/* {venue.location.formattedAddress} */}
+                    {venueDetails.address}
                 </div>
                 <div>
-                    Hours
+                    {/* Hours */}
 
                 </div>
 
-            </Fragment>
+            </section>
 
         )
     }
