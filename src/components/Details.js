@@ -31,16 +31,13 @@ export default class Details extends Component {
                 <div id='venue-cat'>
                     { venueDetails.categories && venueDetails.categories[0].name }
                 </div>
-                <div id='venue-url'>
-                  <a href={venueDetails.url}>Website</a>
-                </div>
-                <div>
+                <div id='venue-des'>
                     {venueDetails.description}
                 </div>
-                <div>
+                <div id='venue-ll'>
                     {venueDetails.location && venueDetails.location.formattedAddress}
                 </div>
-                <div>
+                <div id='venue-hours'>
                   {
                     venueDetails.hours &&
                     venueDetails.hours.timeframes.map( tf => (
@@ -48,7 +45,7 @@ export default class Details extends Component {
                         <div>
                           Days: {tf.days}
                         </div>
-                        <div>
+                        <div >
                           Hours:
                           {
                             tf.open.map( time => (

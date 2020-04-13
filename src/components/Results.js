@@ -27,7 +27,7 @@ export default class Results extends Component {
       fetch(`https://api.foursquare.com/v2/venues/${venueId}?` + new URLSearchParams(params))
         .then(res => res.json())
         .then(data => {
-          alert(data.response.venue.name)
+          // alert(data.response.venue.name)
           this.setState({venueDetails: data.response.venue})
         })
         .catch(error => alert(error))

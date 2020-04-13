@@ -1,7 +1,9 @@
 #modal {
-    margin-top: 70px;
+    /* margin-top: 70px; */
     max-width: 30vw;
-    border: 5px solid #D63930;
+    margin-right: 0px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 #venue-det {
