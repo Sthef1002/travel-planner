@@ -22,7 +22,7 @@ export default class Results extends Component {
         venueDetails: {},
     }
 
-    handleChange = venueId => {
+    handleChange = ({venueId, gImg}) => {
       const params = {
           ...KEYS,
           v: '20220403',
@@ -31,7 +31,7 @@ export default class Results extends Component {
         .then(res => res.json())
         .then(data => {
           // alert(data.response.venue.name)
-          this.setState({venueDetails: data.response.venue})
+          this.setState({venueDetails: {...data.response.venue, gImg}})
         })
         .catch(error => alert(error))
       this.props.history.push(`/location/${this.props.match.params.query}/modal`)
