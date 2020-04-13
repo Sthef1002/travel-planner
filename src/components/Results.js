@@ -3,7 +3,13 @@ import React, { Component } from 'react'
 import SelectionList from './SelectionList'
 import Map from './Map'
 import Details from './Details'
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom'
+const KEYS = {
+  client_id: "PMHC2WA1VCBHVYOPPSJ0QSBYTLRF4PNJ04OWVWV0PZJ0QFIR",
+  client_secret: "CULSZZ44YAEBOWBFGPB4BF5ISRXXSNYR0EE3JV3CNE2ZWHV0"
+  // client_id: "K2DOBAFKPW4UDFBWIGJM2EM2VFQNUIM3BU1ATQOCJ4WOGRDW",
+  // client_secret: "RB01AD1GD3RTE45S0SNLYQCASMMVN3SJHYBEHBZQM5IXGIZL",
+}
 
 export default class Results extends Component {
 
@@ -15,8 +21,7 @@ export default class Results extends Component {
 
     handleChange = venueId => {
       const params = {
-          client_id: "K2DOBAFKPW4UDFBWIGJM2EM2VFQNUIM3BU1ATQOCJ4WOGRDW",
-          client_secret: "RB01AD1GD3RTE45S0SNLYQCASMMVN3SJHYBEHBZQM5IXGIZL",
+          ...KEYS,
           v: '20220403',
       }
       fetch(`https://api.foursquare.com/v2/venues/${venueId}?` + new URLSearchParams(params))
@@ -42,8 +47,7 @@ export default class Results extends Component {
         const venuesEndpoint = 'https://api.foursquare.com/v2/venues/search?';
 
         const params = {
-          client_id: "K2DOBAFKPW4UDFBWIGJM2EM2VFQNUIM3BU1ATQOCJ4WOGRDW",
-          client_secret: "RB01AD1GD3RTE45S0SNLYQCASMMVN3SJHYBEHBZQM5IXGIZL",
+          ...KEYS,
           limit: 20, //The max number of venues to load
           query: query, //The type of venues we want to query
           v: '20220403', //The version of the API.

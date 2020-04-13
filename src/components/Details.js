@@ -40,6 +40,26 @@ export default class Details extends Component {
                 <div>
                     {venueDetails.location && venueDetails.location.formattedAddress}
                 </div>
+                <div>
+                  {
+                    venueDetails.hours &&
+                    venueDetails.hours.timeframes.map( tf => (
+                      <Fragment>
+                        <div>
+                          Days: {tf.days}
+                        </div>
+                        <div>
+                          Hours:
+                          {
+                            tf.open.map( time => (
+                              time.renderedTime
+                            ))
+                          }
+                        </div>
+                      </Fragment>
+                    ))
+                  }
+                </div>
             </section>
 
         )
