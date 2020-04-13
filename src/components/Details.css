@@ -1,16 +1,67 @@
 #modal {
-    /* margin-top: 70px; */
     max-width: 30vw;
     margin-right: 0px;
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    background-color: white;
 }
 
-#venue-det {
-    width: 35vw;
+#back{
+    background-color: white;
+    color: black;
+    font: Bold 12px/14px Arial;
+    border: none;
+}
+
+#add{
+    background-color: white;
+    color: #4DB646;
+    font: Bold 12px/14px Arial;
+    border: none;
 }
 
 #venue-img {
-    margin-top: 0px;
-
+    margin-bottom: 50px;
+    border-radius: 6px;
 }
+
+#venue-name {
+    text-align: left;
+    font: Bold 20px/25px Helvetica Neue;
+    margin-bottom: 5px;
+}
+
+#venue-cat {
+    text-align: left;
+    font: Regular 16px/18px Helvetica Neue;
+    color: #717171;
+    margin-bottom: 15px;
+}
+
+#venue-des, #venue-ll, #venue-hours {
+    text-align: left;
+    font: Regular 16px/18px Helvetica Neue;
+    color: #717171;
+}
+
+
+#venue-des {
+    margin-bottom: 25px;
+}
+
+#venue-ll{
+    margin-bottom: 2px;
+}
+
+#sub {
+    text-align: left;
+    font: Bold 16px Helvetica Neue;
+    color: #717171;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
