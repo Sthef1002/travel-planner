@@ -26,14 +26,11 @@ const MarkerWithInfo = ({venue, handleChange}) => {
                     <div id='cat-map'>
                       {venue.categories[0].name}
                     </div>
-                    <div id='name-address'>
-                      {venue.location.formattedAddress}
-                    </div>
                     <div id='img-map'>
                     <img
                       style={{display: 'block', margin: 'auto'}}
                       alt={`${venue.name} street view`}
-                      src={`https://maps.googleapis.com/maps/api/streetview?size=150x150&location=${venue.location.lat},${venue.location.lng}&fov=90&heading=235&pitch=10&key=AIzaSyDicFQoRWREO_gX1sTklPjE8Kjhni7qmQU`} />
+                      src={`https://maps.googleapis.com/maps/api/streetview?size=230x100&location=${venue.location.lat},${venue.location.lng}&fov=90&heading=235&pitch=10&key=AIzaSyDicFQoRWREO_gX1sTklPjE8Kjhni7qmQU`} />
                       
                     </div>
                     <div>
