@@ -27,11 +27,10 @@ const MarkerWithInfo = ({venue, handleChange}) => {
                       {venue.categories[0].name}
                     </div>
                     <div id='img-map'>
-                    <img
-                      style={{display: 'block', margin: 'auto'}}
-                      alt={`${venue.name} street view`}
-                      src={`https://maps.googleapis.com/maps/api/streetview?size=230x100&location=${venue.location.lat},${venue.location.lng}&fov=90&heading=235&pitch=10&key=AIzaSyDicFQoRWREO_gX1sTklPjE8Kjhni7qmQU`} />
-                      
+                      <img
+                        style={{display: 'block', margin: 'auto'}}
+                        alt={`${venue.name} street view`}
+                        src={`https://maps.googleapis.com/maps/api/streetview?size=230x100&location=${venue.location.lat},${venue.location.lng}&fov=90&heading=235&pitch=10&key=AIzaSyDicFQoRWREO_gX1sTklPjE8Kjhni7qmQU`} /> 
                     </div>
                     <div>
                       <button

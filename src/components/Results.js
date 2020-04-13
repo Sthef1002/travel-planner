@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import SelectionList from './SelectionList'
 import Map from './Map'
 import Details from './Details'
+import DateList from './DateList';
 import { Route, Switch } from 'react-router-dom'
 const KEYS = {
   // client_id: "PMHC2WA1VCBHVYOPPSJ0QSBYTLRF4PNJ04OWVWV0PZJ0QFIR",
@@ -72,6 +73,7 @@ export default class Results extends Component {
     render() {
         return (
             <div>
+              {/* <DateList /> */}
               <Switch>
                 <Route path='/location/:query/modal'>
                   <Details
