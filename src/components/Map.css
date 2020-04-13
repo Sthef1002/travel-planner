@@ -1,16 +1,9 @@
 #gmap {
     width: 70vw;
     height: 93vh;
-    /* margin-left: 30vw; */
     margin-left: 0px;
     display: inline-block;
     vertical-align: middle;
-    
-/* Complete Map
-  position: absolute;
-  height: calc(100% - 70px);
-  width: 100%;
-  left: 0%; */
 }
 
 /* this section is the cards on the map */
