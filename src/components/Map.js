@@ -7,6 +7,7 @@ const MarkerWithInfo = ({venue, handleChange}) => {
   const suffix = venue.categories[0].icon.suffix
   const imageSize = '230x100'
   const [isShowing, setIsShowing] = useState(false)
+  // const authentication = "&client_id=PMHC2WA1VCBHVYOPPSJ0QSBYTLRF4PNJ04OWVWV0PZJ0QFIR&client_secret=CULSZZ44YAEBOWBFGPB4BF5ISRXXSNYR0EE3JV3CNE2ZWHV0"
 
 
   return(
@@ -27,11 +28,19 @@ const MarkerWithInfo = ({venue, handleChange}) => {
                     <div id='cat-map'>
                       {venue.categories[0].name}
                     </div>
+                    <div id='name-address'>
+                      {venue.location.formattedAddress}
+                    </div>
                     <div id='img-map'>
-                      <img
+                    <img
                       // src={prefix+imageSize+suffix} alt='Venue foto'
                       src='https://picsum.photos/230/100' alt='Venue foto'
                       />
+                         {/* <img
+                      // src={prefix+imageSize+suffix} alt='Venue foto'
+                      src={prefix+imageSize+suffix} alt='Venue foto'
+                      /> */}
+                      
                     </div>
                     <div>
                       <button
@@ -84,4 +93,5 @@ export default function Map(props) {
 
         </div>
       );
-    }
+    
+}

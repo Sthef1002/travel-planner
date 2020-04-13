@@ -17,7 +17,7 @@ export default class Details extends Component {
                   Add to list
                 </button>
                 <div id='venue-img'>
-                   {/* {venueDetail.picture} */}
+                   {/* {venueDetails.picture} */}
                 </div>
                 <div id='venue-name'>
                     {venueDetails.name}
