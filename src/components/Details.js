@@ -1,41 +1,45 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { Component, Fragment } from 'react'
 import './Details.css'
 
 export default class Details extends Component {
 
-
     render() {
-
-        const venue = { categories: [] }
-        const {venueDetails} = this.props
+      let {venueDetails} = this.props
         return (
 
             <section id='modal'>
-                <button
+                {/* <button
                   onClick={() => this.props.changeSelections(this.props.venueDetails)}
                 >
                   Add to list
-                </button>
+                </button> */}
                 <div id='venue-img'>
-                   {/* {venueDetail.picture} */}
+                  {
+                    venueDetails.bestPhoto && (
+                      <img
+                        src={venueDetails.bestPhoto.prefix+'300x300'+venueDetails.bestPhoto.suffix}
+                        alt={`${venueDetails.name} Image`}
+                        style={{maxWidth: '100%'}}
+                      />
+                    )
+                  }
                 </div>
                 <div id='venue-name'>
                     {venueDetails.name}
                 </div>
                 <div id='venue-cat'>
-                    {/* {venueDetails.categories[0].name} */}
+                    { venueDetails.categories && venueDetails.categories[0].name }
                 </div>
-                <div id='venue-det'>
-                    {/* Central Park is the 843-acre green heart of Manhattan and is maintained by the Central Park Conservancy. It was designed in the 19th century by Frederick Law Olmsted and Calvert Vaux as an urban escape for New Yorkers, and now receives over 40 million visits per year */}
-                </div>
-                <div>
-                    {venueDetails.rating}
+                <div id='venue-url'>
+                  <a href={venueDetails.url}>Website</a>
                 </div>
                 <div>
-                    {/* {venueDetails.contact[0].phone} */}
-
+                    {venueDetails.description}
                 </div>
-
+                <div>
+                    {venueDetails.location && venueDetails.location.formattedAddress}
+                </div>
             </section>
 
         )

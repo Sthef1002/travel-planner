@@ -3,11 +3,10 @@ import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from "react-
 import './Map.css';
 
 const MarkerWithInfo = ({venue, handleChange}) => {
-  const prefix = venue.categories[0].icon.prefix
-  const suffix = venue.categories[0].icon.suffix
-  const imageSize = '230x100'
+  // const prefix = venue.categories[0].icon.prefix
+  // const suffix = venue.categories[0].icon.suffix
+  // const imageSize = '230x100'
   const [isShowing, setIsShowing] = useState(false)
-
 
   return(
 
@@ -27,11 +26,15 @@ const MarkerWithInfo = ({venue, handleChange}) => {
                     <div id='cat-map'>
                       {venue.categories[0].name}
                     </div>
+                    <div id='name-address'>
+                      {venue.location.formattedAddress}
+                    </div>
                     <div id='img-map'>
-                      <img
-                      // src={prefix+imageSize+suffix} alt='Venue foto'
-                      src='https://picsum.photos/230/100' alt='Venue foto'
-                      />
+                    <img
+                      style={{display: 'block', margin: 'auto'}}
+                      alt={`${venue.name} street view`}
+                      src={`https://maps.googleapis.com/maps/api/streetview?size=150x150&location=${venue.location.lat},${venue.location.lng}&fov=90&heading=235&pitch=10&key=AIzaSyDicFQoRWREO_gX1sTklPjE8Kjhni7qmQU`} />
+                      
                     </div>
                     <div>
                       <button
@@ -52,7 +55,7 @@ const MarkerWithInfo = ({venue, handleChange}) => {
 function GMap(props) {
     return (
         <GoogleMap
-        defaultZoom={10}
+        defaultZoom={14}
         defaultCenter={{lat: 25.761681, lng: -80.191788}}
         >
           {
@@ -84,4 +87,5 @@ export default function Map(props) {
 
         </div>
       );
-    }
+    
+}
