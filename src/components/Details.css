@@ -1,8 +1,14 @@
+#modal {
+    margin-top: 70px;
+    max-width: 30vw;
+    border: 5px solid #D63930;
+}
+
 #venue-det {
     width: 35vw;
 }
 
 #venue-img {
-    margin-top: 100px;
+    margin-top: 0px;
 
 }
