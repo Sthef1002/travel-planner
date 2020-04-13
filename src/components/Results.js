@@ -50,7 +50,8 @@ export default class Results extends Component {
 
         const params = {
           ...KEYS,
-          limit: 20, //The max number of venues to load
+          radius: 2500, //the max search area
+          limit: 50, //The max number of venues to load
           query: query, //The type of venues we want to query
           v: '20220403', //The version of the API.
           ll: '25.761681, -80.191788' //The latitude and longitude
