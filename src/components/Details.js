@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import './Details.css'
 
 export default class Details extends Component {
@@ -12,7 +14,7 @@ export default class Details extends Component {
 
         <section id='modal'>
           <Link to="/location/:query" id='back'>
-           Back
+            <FontAwesomeIcon icon={faArrowLeft} />
           </Link>
           <button
             id='add'

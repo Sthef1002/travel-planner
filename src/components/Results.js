@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import SelectionList from './SelectionList'
 import Map from './Map'
 import Details from './Details'
+import './Results.css'
 import DateList from './DateList';
 import { Container, Row, Col } from 'react-bootstrap'
 import { Route, Switch } from 'react-router-dom'
@@ -73,7 +74,7 @@ export default class Results extends Component {
 
     render() {
         return (
-            <Container fluid>
+            <Container fluid id='division'>
                 <Row>
                   <Col md={4}>
                     <Switch>
