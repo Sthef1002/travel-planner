@@ -101,7 +101,7 @@ export default class Results extends Component {
                       />
                     </Switch>
                   </Col>
-                  <Col md={8}>
+                  <Col md={8} style={{paddingRight: "0px"}}>
                     <Route
                       path='/location/:query'
                       render={ props => (

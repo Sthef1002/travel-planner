@@ -24,7 +24,7 @@ class SelectionList extends Component {
                             <Card.Img 
                               id='image-select'
                               variant="top" 
-                              src="https://picsum.photos/id/204/100/100/" 
+                              src={`https://maps.googleapis.com/maps/api/streetview?size=200x100&location=${venue.location.lat},${venue.location.lng}&fov=90&heading=235&pitch=10&key=AIzaSyDicFQoRWREO_gX1sTklPjE8Kjhni7qmQU`}
 
                             />
                             <Card.Body id='content-select'>
