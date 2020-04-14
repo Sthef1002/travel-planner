@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { Component, Fragment } from 'react'
+import { Link } from 'react-router-dom'
 import './Details.css'
 
 export default class Details extends Component {
@@ -10,12 +11,15 @@ export default class Details extends Component {
       return (
 
         <section id='modal'>
-          <button id='back'>
-          Back
-          </button>
-            <button
+          <Link to="/location/:query" id='back'>
+           Back
+          </Link>
+          <button
             id='add'
-            onClick={() => this.props.changeSelections(this.props.venueDetails)}
+            onClick={() => {
+              console.log('clicking')
+              this.props.changeSelections(this.props.venueDetails)
+            }}
           >
             Add to list +
           </button>
@@ -51,8 +55,8 @@ export default class Details extends Component {
           <div id='venue-hours'>
             {
               venueDetails.hours &&
-              venueDetails.hours.timeframes.map( tf => (
-                <Fragment>
+              venueDetails.hours.timeframes.map( (tf, i) => (
+                <div key={i}>
                   <div>
                   {tf.days}
                   </div>
@@ -63,7 +67,7 @@ export default class Details extends Component {
                       ))
                     }
                   </div>
-                </Fragment>
+                </div>
               ))
             }
           </div>

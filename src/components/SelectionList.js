@@ -1,29 +1,21 @@
 import React, { Component } from 'react';
 
 class SelectionList extends Component {
-
-  constructor() {
-    super();
-    this.state = {
-      venues: [],
-      lat: 0,
-      lng: 0
-    };
+  componentDidMount(){
+    window.caches.selectedVenues = this.props.selectedVenues.length > 0 ? this.props.selectedVenues : window.caches.selectedVenues
   }
-
-  componentDidMount() {
-
-  }
-
 
   render() {
     return (
       <div>
           <ul>
             {
-              this.state.venues.map((venues, index) => {
+              window.caches.selectedVenues &&
+              window.caches.selectedVenues.map((venue, index) => {
                 return (
-                  <li key={index}></li>
+                  <li key={index}>
+                    {venue.name}
+                  </li>
                 )
               })
             }

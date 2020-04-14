@@ -4,6 +4,7 @@ import SelectionList from './SelectionList'
 import Map from './Map'
 import Details from './Details'
 import DateList from './DateList';
+import { Container, Row, Col } from 'react-bootstrap'
 import { Route, Switch } from 'react-router-dom'
 const KEYS = {
   // client_id: "PMHC2WA1VCBHVYOPPSJ0QSBYTLRF4PNJ04OWVWV0PZJ0QFIR",
@@ -72,19 +73,25 @@ export default class Results extends Component {
 
     render() {
         return (
-            <div>
+            <Container fluid>
+                <Row>
+                  <Col md={4}>
+                    <Switch>
+                      <Route path='/location/:query/modal'>
+                        <Details
+                          venueDetails={this.state.venueDetails}
+                          changeSelections={this.changeSelections}
+                        />
+                      </Route>
+                      <Route path='/location/:query' render={props => <SelectionList {...props} selectedVenues={this.state.selectedVenues}/>} />
+                    </Switch>
+                  </Col>
+                  <Col md={8}>
+                    <Route path='/location/:query' render={props => <Map {...props} venues={this.state.venues} handleChange={this.handleChange} />} />
+                  </Col>
+                </Row>
               {/* <DateList /> */}
-              <Switch>
-                <Route path='/location/:query/modal'>
-                  <Details
-                    venueDetails={this.state.venueDetails}
-                    changeSelections={this.changeSelections}
-                  />
-                </Route>
-                <Route path='/location/:query' render={props => <SelectionList {...props} selectedVenues={this.state.selectedVenues}/>} />
-              </Switch>
-              <Route path='/location/:query' render={props => <Map {...props} venues={this.state.venues} handleChange={this.handleChange} />} />
-            </div>
+            </Container>
         )
     }
 }
