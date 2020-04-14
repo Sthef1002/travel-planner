@@ -23,16 +23,15 @@
     text-align: left;
     font: Regular 16px/18px Arial;
     color: #717171;
-    height: 53px;
+    height: 50px;
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 0px;
-
-
 }
 
 #link-details {
     text-align: left;
     font: Regular 12px/14px Arial;
+    margin-top: 50px;
     color: #000000;
 }

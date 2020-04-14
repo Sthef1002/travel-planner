@@ -32,7 +32,7 @@ class SelectionList extends Component {
                                 {venue.name} 
                               </Card.Title>
                               <Card.Text id='description-select'>
-                                {venue.categories[0].name}
+                                {venue.description}
                               </Card.Text>
                             <Card.Link id='link-details' href='({venueId: venue.id})}'>
                               Show details
