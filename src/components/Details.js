@@ -11,16 +11,15 @@ export default class Details extends Component {
       let {venueDetails} = this.props
       let imgSrc = venueDetails.bestPhoto ? `${venueDetails.bestPhoto.prefix}560x200${venueDetails.bestPhoto.suffix}` : venueDetails.gImg
       return (
-
         <section id='modal'>
-          <Link to="/location/:query" id='back'>
+          <Link to={`/location/${this.props.match.params.query}`} id='back'>
             <FontAwesomeIcon icon={faArrowLeft} />
           </Link>
           <button
             id='add'
             onClick={() => {
-              console.log('clicking')
-              this.props.changeSelections(this.props.venueDetails)
+              this.props.changeSelections(venueDetails)
+              this.props.history.push(`/location/${this.props.match.params.query}`)
             }}
           >
             Add to list +
@@ -29,7 +28,7 @@ export default class Details extends Component {
             {
               venueDetails.bestPhoto && (
                 <img
-                  src={venueDetails.bestPhoto.prefix+'560x200'+venueDetails.bestPhoto.suffix}
+                  src={imgSrc}
                   alt={`${venueDetails.name} Image`}
                   style={{maxWidth: '100%'}}
                 />

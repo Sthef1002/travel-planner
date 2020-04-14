@@ -1,11 +1,9 @@
 #dates-placeholder{
     background-image: url(../left\ bar.png);
-    max-width: 30vw;
+    width: 100%;
     margin-right: 0px;
-    height: 1000px;
+    min-height: 100vh;
     background-repeat: no-repeat;
     position: absolute;
     vertical-align: middle;
-    padding-right: 1000px;
-
 }
