@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import SelectionList from './SelectionList'
 import Map from './Map'
 import Details from './Details'
-import DateList from './DateList';
+import './Results.css'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Route, Switch } from 'react-router-dom'
 const KEYS = {
@@ -24,6 +24,8 @@ export default class Results extends Component {
     }
 
     handleChange = ({venueId, gImg}) => {
+      console.log("getting venue details");
+
       const params = {
           ...KEYS,
           v: '20220403',
@@ -41,6 +43,7 @@ export default class Results extends Component {
     changeSelections = (value, type='add') => {
       switch (type) {
         case 'add':
+          console.log("Adding")
           this.setState({ selectedVenues: [value, ...this.state.selectedVenues] })
           break
       }
@@ -73,24 +76,44 @@ export default class Results extends Component {
 
     render() {
         return (
-            <Container fluid>
+            <Container fluid id='division'>
                 <Row>
                   <Col md={4}>
                     <Switch>
-                      <Route path='/location/:query/modal'>
-                        <Details
-                          venueDetails={this.state.venueDetails}
-                          changeSelections={this.changeSelections}
-                        />
-                      </Route>
-                      <Route path='/location/:query' render={props => <SelectionList {...props} selectedVenues={this.state.selectedVenues}/>} />
+                      <Route
+                        path='/location/:query/modal'
+                        render={ props => (
+                          <Details
+                            {...props}
+                            venueDetails={this.state.venueDetails}
+                            changeSelections={this.changeSelections}
+                          />
+                        )}
+                      />
+                      <Route
+                        path='/location/:query'
+                        render={ props => (
+                          <SelectionList
+                            {...props}
+                            selectedVenues={this.state.selectedVenues}
+                          />
+                        )}
+                      />
                     </Switch>
                   </Col>
                   <Col md={8}>
-                    <Route path='/location/:query' render={props => <Map {...props} venues={this.state.venues} handleChange={this.handleChange} />} />
+                    <Route
+                      path='/location/:query'
+                      render={ props => (
+                        <Map
+                          {...props}
+                          venues={this.state.venues}
+                          handleChange={this.handleChange}
+                        />
+                      )}
+                    />
                   </Col>
                 </Row>
-              {/* <DateList /> */}
             </Container>
         )
     }

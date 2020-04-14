@@ -11,7 +11,7 @@ form{
 
 #venueCity {
     background: rgba(255,255,255,0.7);
-    border: 3px solid white;
+    border: 1px solid white;
     padding: 1em;
     border-radius: 6px;
     letter-spacing: 0px;
@@ -29,6 +29,7 @@ form{
     background: #D63930 0% 0% no-repeat;
     border-radius: 5px;
     color: white;
+    border: #D63930;
     font: Bold 16px/18px Arial;
     padding: 0;
     margin: 0.10em 0.2em;

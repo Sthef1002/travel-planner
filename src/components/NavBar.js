@@ -154,7 +154,7 @@ export default class NavBar extends Component {
         return (
             <div>
                 <Navbar id='nav' fixed="top">
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand href="/">
                
                         <img
                             alt="Travel Planner logo"
