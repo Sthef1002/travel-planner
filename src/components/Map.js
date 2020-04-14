@@ -28,7 +28,7 @@ const MarkerWithInfo = ({venue, handleChange}) => {
                     </div>
                     <div id='img-map'>
                       <img
-                        style={{display: 'block', margin: 'auto'}}
+                        style={{ borderRadius: '5px'}}
                         alt={`${venue.name} street view`}
                         src={googleImage} />
                     </div>

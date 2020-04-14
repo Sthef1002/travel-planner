@@ -1,5 +1,4 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
@@ -12,25 +11,27 @@ export default class Details extends Component {
       let imgSrc = venueDetails.bestPhoto ? `${venueDetails.bestPhoto.prefix}560x200${venueDetails.bestPhoto.suffix}` : venueDetails.gImg
       return (
         <section id='modal'>
-          <Link to={`/location/${this.props.match.params.query}`} id='back'>
-            <FontAwesomeIcon icon={faArrowLeft} />
-          </Link>
-          <button
-            id='add'
-            onClick={() => {
-              this.props.changeSelections(venueDetails)
-              this.props.history.push(`/location/${this.props.match.params.query}`)
-            }}
-          >
-            Add to list +
-          </button>
+          <div id='buttons'>
+            <Link to={`/location/${this.props.match.params.query}`} id='back'>
+              <FontAwesomeIcon icon={faArrowLeft} />
+            </Link>
+            <button
+              id='add'
+              onClick={() => {
+                this.props.changeSelections(venueDetails)
+                this.props.history.push(`/location/${this.props.match.params.query}`)
+              }}
+            >
+              Add to list +
+            </button>
+          </div>
           <div id='venue-img'>
             {
               venueDetails.bestPhoto && (
                 <img
                   src={imgSrc}
                   alt={`${venueDetails.name} Image`}
-                  style={{maxWidth: '100%'}}
+                  style={{maxWidth: '100%', height: '250px', borderRadius: '6px' }}
                 />
               )
             }

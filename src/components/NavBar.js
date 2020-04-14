@@ -16,7 +16,7 @@ import breakfastg from "./NavBar/breakfastg.png"
 import breakfastr from "./NavBar/breakfastr.png"
 
 
-class Food extends React.Component {
+class Food extends Component {
   render(){
     return (
       <div>
@@ -27,7 +27,6 @@ class Food extends React.Component {
             width:35, 
             height:35, 
             marginRight:20,  
-            marginLeft: 1275, 
             padding: 5, 
             border: '1px solid white', 
             borderRadius: 5,
@@ -39,7 +38,7 @@ class Food extends React.Component {
   }
 }
 
-class Coffee extends React.Component {
+class Coffee extends Component {
   render(){
     return (
       <div>
@@ -61,7 +60,7 @@ class Coffee extends React.Component {
   }
 }
 
-class Nightlife extends React.Component {
+class Nightlife extends Component {
   render(){
     return (
       <div>
@@ -83,7 +82,7 @@ class Nightlife extends React.Component {
   }
 }
 
-class Fun extends React.Component {
+class Fun extends Component {
   render(){
     return (
       <div> 
@@ -105,7 +104,7 @@ class Fun extends React.Component {
   }
 }
 
-class Shopping extends React.Component {
+class Shopping extends Component {
     render(){
       return (
         <div>
@@ -127,7 +126,7 @@ class Shopping extends React.Component {
     }
   }
  
-  class Breakfast extends React.Component {
+  class Breakfast extends Component {
     render(){
       return (
         <div>
@@ -159,16 +158,19 @@ export default class NavBar extends Component {
                         <img
                             alt="Travel Planner logo"
                             src="/logo.png"
+                            id='tavel-logo'
                             height="40"
                             width="111"   
                         />
-                    </Navbar.Brand>
-                    <Food className="icons"/>
-                    <Coffee className="icons"/>
-                    <Nightlife className="icons"/>
-                    <Fun className="icons"/>
-                    <Shopping className="icons"/>
-                    <Breakfast className="icons"/>
+                    </Navbar.Brand >
+                     <div id='icons-group'>
+                      <Food className="icons"/>
+                      <Coffee className="icons"/>
+                      <Nightlife className="icons"/>
+                      <Fun className="icons"/>
+                      <Shopping className="icons"/>
+                      <Breakfast className="icons"/>
+                    </div>
                 </Navbar> 
             </div>
         )
