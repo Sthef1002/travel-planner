@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import SelectionList from './SelectionList'
 import Map from './Map'
 import Details from './Details'
+import DateList from './DateList';
+import { Container, Row, Col } from 'react-bootstrap'
 import { Route, Switch } from 'react-router-dom'
 const KEYS = {
   // client_id: "PMHC2WA1VCBHVYOPPSJ0QSBYTLRF4PNJ04OWVWV0PZJ0QFIR",
@@ -21,7 +23,7 @@ export default class Results extends Component {
         venueDetails: {},
     }
 
-    handleChange = venueId => {
+    handleChange = ({venueId, gImg}) => {
       const params = {
           ...KEYS,
           v: '20220403',
@@ -30,7 +32,7 @@ export default class Results extends Component {
         .then(res => res.json())
         .then(data => {
           // alert(data.response.venue.name)
-          this.setState({venueDetails: data.response.venue})
+          this.setState({venueDetails: {...data.response.venue, gImg}})
         })
         .catch(error => alert(error))
       this.props.history.push(`/location/${this.props.match.params.query}/modal`)
@@ -71,18 +73,25 @@ export default class Results extends Component {
 
     render() {
         return (
-            <div>
-              <Switch>
-                <Route path='/location/:query/modal'>
-                  <Details
-                    venueDetails={this.state.venueDetails}
-                    changeSelections={this.changeSelections}
-                  />
-                </Route>
-                <Route path='/location/:query' render={props => <SelectionList {...props} selectedVenues={this.state.selectedVenues}/>} />
-              </Switch>
-              <Route path='/location/:query' render={props => <Map {...props} venues={this.state.venues} handleChange={this.handleChange} />} />
-            </div>
+            <Container fluid>
+                <Row>
+                  <Col md={4}>
+                    <Switch>
+                      <Route path='/location/:query/modal'>
+                        <Details
+                          venueDetails={this.state.venueDetails}
+                          changeSelections={this.changeSelections}
+                        />
+                      </Route>
+                      <Route path='/location/:query' render={props => <SelectionList {...props} selectedVenues={this.state.selectedVenues}/>} />
+                    </Switch>
+                  </Col>
+                  <Col md={8}>
+                    <Route path='/location/:query' render={props => <Map {...props} venues={this.state.venues} handleChange={this.handleChange} />} />
+                  </Col>
+                </Row>
+              {/* <DateList /> */}
+            </Container>
         )
     }
 }
