@@ -1,0 +1,38 @@
+#container-info{
+    display: flex;
+    flex-direction: row;
+    border: white;
+    padding: 10px;
+}
+
+#image-select {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+#title-select {
+    text-align: left;
+    font: Bold 16px/18px Arial;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+#description-select{
+    color:black;
+    text-align: left;
+    font: Regular 16px/18px Arial;
+    color: #717171;
+    height: 53px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0px;
+
+
+}
+
+#link-details {
+    text-align: left;
+    font: Regular 12px/14px Arial;
+    color: #000000;
+}
