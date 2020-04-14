@@ -32,7 +32,7 @@ export default class Details extends Component {
                 <img
                   src={imgSrc}
                   alt={`${venueDetails.name} Image`}
-                  style={{maxWidth: '100%'}}
+                  style={{maxWidth: '100%', height: '250px', borderRadius: '6px' }}
                 />
               )
             }
