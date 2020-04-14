@@ -12,18 +12,20 @@ export default class Details extends Component {
       let imgSrc = venueDetails.bestPhoto ? `${venueDetails.bestPhoto.prefix}560x200${venueDetails.bestPhoto.suffix}` : venueDetails.gImg
       return (
         <section id='modal'>
-          <Link to={`/location/${this.props.match.params.query}`} id='back'>
-            <FontAwesomeIcon icon={faArrowLeft} />
-          </Link>
-          <button
-            id='add'
-            onClick={() => {
-              this.props.changeSelections(venueDetails)
-              this.props.history.push(`/location/${this.props.match.params.query}`)
-            }}
-          >
-            Add to list +
-          </button>
+          <div id='buttons'>
+            <Link to={`/location/${this.props.match.params.query}`} id='back'>
+              <FontAwesomeIcon icon={faArrowLeft} />
+            </Link>
+            <button
+              id='add'
+              onClick={() => {
+                this.props.changeSelections(venueDetails)
+                this.props.history.push(`/location/${this.props.match.params.query}`)
+              }}
+            >
+              Add to list +
+            </button>
+          </div>
           <div id='venue-img'>
             {
               venueDetails.bestPhoto && (

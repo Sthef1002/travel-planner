@@ -4,9 +4,15 @@
     display: inline-block;
     vertical-align: top;
     padding-left: 30px;
-    padding-right: 30px;
     padding-bottom: 45px;
     background-color: white;
+}
+
+#buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #back{
@@ -15,6 +21,10 @@
     font: Bold 12px/14px Arial;
     border: none;
     padding: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+    
 }
 
 #add{
@@ -23,9 +33,10 @@
     font: Bold 12px/14px Arial;
     border: none;
     padding: 0px;
-    margin-left: 20.6vw;
+    /* margin-left: 20.6vw; */
     margin-bottom: 20px;
     margin-top: 20px;
+
 
 }
 
