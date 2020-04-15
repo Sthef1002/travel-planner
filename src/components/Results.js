@@ -101,6 +101,7 @@ export default class Results extends Component {
                             {...props}
                             selectedVenues={this.state.selectedVenues}
                             setPreloadedVenueDetails={this.setPreloadedVenueDetails}
+                            venueId={this.state.venueDetails.id}
                           />
                         )}
                       />
