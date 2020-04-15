@@ -40,6 +40,10 @@ export default class Results extends Component {
       this.props.history.push(`/location/${this.props.match.params.query}/modal`)
     }
 
+    setPreloadedVenueDetails = venueDetails => {
+      this.setState(venueDetails)
+    }
+
     changeSelections = (value, type='add') => {
       switch (type) {
         case 'add':
@@ -96,6 +100,7 @@ export default class Results extends Component {
                           <SelectionList
                             {...props}
                             selectedVenues={this.state.selectedVenues}
+                            setPreloadedVenueDetails={this.setPreloadedVenueDetails}
                           />
                         )}
                       />
