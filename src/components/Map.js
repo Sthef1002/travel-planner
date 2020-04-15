@@ -24,7 +24,8 @@ const MarkerWithInfo = ({venue, handleChange}) => {
                       {venue.name}
                     </div>
                     <div id='cat-map'>
-                      {venue.categories[0].name}
+                      {!!venue.categories.length && venue.categories[0].name}
+                      {/* {!venue.categories.length && venue.categories[0].name} */}
                     </div>
                     <div id='img-map'>
                       <img

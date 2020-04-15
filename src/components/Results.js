@@ -5,7 +5,7 @@ import Map from './Map'
 import Details from './Details'
 import './Results.css'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 const KEYS = {
   // client_id: "PMHC2WA1VCBHVYOPPSJ0QSBYTLRF4PNJ04OWVWV0PZJ0QFIR",
   // client_secret: "CULSZZ44YAEBOWBFGPB4BF5ISRXXSNYR0EE3JV3CNE2ZWHV0",
@@ -38,6 +38,10 @@ export default class Results extends Component {
         })
         .catch(error => alert(error))
       this.props.history.push(`/location/${this.props.match.params.query}/modal`)
+    }
+
+    setPreloadedVenueDetails = venueDetails => {
+      this.setState({venueDetails})
     }
 
     changeSelections = (value, type='add') => {
@@ -90,12 +94,17 @@ export default class Results extends Component {
                           />
                         )}
                       />
+                      {/* <Route path="/location/:query/modal/:venueId">
+                        <Redirect to="/location/:query/modal" />
+                      </Route> */}
                       <Route
                         path='/location/:query'
                         render={ props => (
                           <SelectionList
                             {...props}
                             selectedVenues={this.state.selectedVenues}
+                            setPreloadedVenueDetails={this.setPreloadedVenueDetails}
+                            venueId={this.state.venueDetails.id}
                           />
                         )}
                       />
