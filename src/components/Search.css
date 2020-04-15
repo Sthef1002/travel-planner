@@ -16,11 +16,12 @@ form{
     border-radius: 6px;
     letter-spacing: 0px;
     color: #707070;
-    width: 350px;
+    width: 450px;
     height: 40px;
     justify-content: center;
     position: center;
-    font: Regular 16px/18px Arial;
+    font: Regular 16px Arial;
+    font-weight: 200;
 }
 
 #button {

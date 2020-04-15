@@ -136,7 +136,6 @@ class Shopping extends Component {
             style = {{
               width:35, 
               height:35, 
-              marginRight:20,  
               padding: 5, 
               border: '1px solid white', 
               borderRadius: 5,
