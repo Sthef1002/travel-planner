@@ -4,7 +4,7 @@ import './PlaceholderAside.css'
 
 
 const PlaceholderAside = () => (
-  <div id='dates-placeholder'></div>
+  <div id='dates-placeholder'> </div>
 )
 
 export default PlaceholderAside

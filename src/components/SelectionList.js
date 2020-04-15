@@ -13,13 +13,19 @@ class SelectionList extends Component {
   render() {
     return (
       <Row>
-        <Col md={4}>
-          <div id='dates-placeholder'></div>
+        <Col md={1} style={{paddingRight: '0px'}}>
+          <div id='dates-placeholder'>
+          </div>
         </Col>
-        <Col md={8}>
+          <div id='name-bar'>
+            <h6 id='font'>
+              Miami
+            </h6>
+          </div>
+        <Col md={11}>
           {
             !!this.props.selectedVenues.length ? (
-              <ul style={{ padding: '0', marginTop: '0' }}>
+              <ul style={{ padding: '0', marginTop: '0', width: '380px',}}>
                 {
                   // window.caches.selectedVenues.map((venue, index) => {
                   this.props.selectedVenues.map((venue, index) => {
@@ -29,7 +35,8 @@ class SelectionList extends Component {
                           <Card.Img
                             id='image-select'
                             variant="top"
-                            src={`https://maps.googleapis.com/maps/api/streetview?size=200x100&location=${venue.location.lat},${venue.location.lng}&fov=90&heading=235&pitch=10&key=AIzaSyDicFQoRWREO_gX1sTklPjE8Kjhni7qmQU`}
+                            style={{ borderRadius: '5px'}}
+                            src={`https://maps.googleapis.com/maps/api/streetview?size=100x100&location=${venue.location.lat},${venue.location.lng}&fov=90&heading=235&pitch=10&key=AIzaSyDicFQoRWREO_gX1sTklPjE8Kjhni7qmQU`}
                           />
                           <Card.Body id='content-select'>
                             <Card.Title id='title-select'>

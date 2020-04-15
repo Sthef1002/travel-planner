@@ -43,7 +43,6 @@ const MarkerWithInfo = ({venue, handleChange}) => {
                       >
                         Show details
                       </button>
-
                     </div>
                   </Fragment>
               </InfoWindow>
@@ -55,7 +54,7 @@ const MarkerWithInfo = ({venue, handleChange}) => {
 function GMap(props) {
     return (
         <GoogleMap
-        defaultZoom={14}
+        defaultZoom={16}
         defaultCenter={{lat: 25.761681, lng: -80.191788}}
         >
           {
@@ -79,7 +78,7 @@ export default function Map(props) {
           <MapWrapped
             googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyD1DrDBUd6GNL2EIBCxK-K0OjkTny8kbuA`}
             loadingElement={<div style={{ height: `100%` }} />}
-            containerElement={<div style={{ height: `100%` }} />}
+            containerElement={<div style={{ height: `100%`, width: '67vw' }} />}
             mapElement={<div style={{ height: `100%` }} />}
             venues={props.venues}
             handleChange={props.handleChange}

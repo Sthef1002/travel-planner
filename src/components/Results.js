@@ -82,7 +82,7 @@ export default class Results extends Component {
         return (
             <Container fluid id='division'>
                 <Row>
-                  <Col md={4}>
+                  <Col md={4} style={{paddingRight: '0px'}}>
                     <Switch>
                       <Route
                         path='/location/:query/modal'
@@ -110,7 +110,7 @@ export default class Results extends Component {
                       />
                     </Switch>
                   </Col>
-                  <Col md={8} style={{paddingRight: "0px"}}>
+                  <Col md={8} style={{padding: "0px"}}>
                     <Route
                       path='/location/:query'
                       render={ props => (
