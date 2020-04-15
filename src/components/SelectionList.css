@@ -1,7 +1,6 @@
 #name-bar {
     background-color: white;
-    padding-top: 19px;
-    padding-bottom: 19px;
+    padding-top: 20px;
     padding-left: 40px;
     height: 69px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -10,7 +9,7 @@
 }
 
 #font {
-    font-size: 30px;
+    font-size: 26px;
     font-family: Arial, Helvetica, sans-serif;
     color: #707070;
     margin: 0px
