@@ -40,7 +40,7 @@ class SelectionList extends Component {
                             </Card.Text>
                             <Link
                               id='link-details'
-                              to={`/location/${this.props.match.params.query}/${this.props.venueId}`}
+                              to={`/location/${this.props.match.params.query}/modal?venueId=${this.props.venueId}`}
                               onClick={() => {
                                 console.log("triggering")
                                 this.props.setPreloadedVenueDetails(venue)
