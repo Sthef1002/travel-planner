@@ -2,7 +2,6 @@ form{
     display: flex;
     align-items: center;
     padding: 0;
-
 }
 
 #inputButton {
@@ -38,4 +37,3 @@ form{
     margin-left: 10px;
     justify-content: center;
 }
-

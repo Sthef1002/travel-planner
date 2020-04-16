@@ -6,9 +6,6 @@ import './PlaceholderAside.css'
 
 
 class SelectionList extends Component {
-  // componentDidMount(){
-  //   window.caches.selectedVenues = this.props.selectedVenues.length > 0 ? this.props.selectedVenues : window.caches.selectedVenues
-  // }
 
   render() {
     return (
@@ -30,7 +27,6 @@ class SelectionList extends Component {
             !!this.props.selectedVenues.length ? (
               <ul style={{ padding: '0', marginTop: '0', width: '380px',}}>
                 {
-                  // window.caches.selectedVenues.map((venue, index) => {
                   this.props.selectedVenues.map((venue, index) => {
                     return (
                       <div key={index}>
@@ -77,4 +73,3 @@ class SelectionList extends Component {
 }
 
 export default SelectionList;
-

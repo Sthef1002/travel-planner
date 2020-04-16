@@ -3,9 +3,6 @@ import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from "react-
 import './Map.css';
 
 const MarkerWithInfo = ({venue, handleChange}) => {
-  // const prefix = venue.categories[0].icon.prefix
-  // const suffix = venue.categories[0].icon.suffix
-  // const imageSize = '230x100'
   const [isShowing, setIsShowing] = useState(false)
   let googleImage = `https://maps.googleapis.com/maps/api/streetview?size=230x100&location=${venue.location.lat},${venue.location.lng}&fov=90&heading=235&pitch=10&key=AIzaSyDicFQoRWREO_gX1sTklPjE8Kjhni7qmQU`
   return(
@@ -25,7 +22,6 @@ const MarkerWithInfo = ({venue, handleChange}) => {
                     </div>
                     <div id='cat-map'>
                       {!!venue.categories.length && venue.categories[0].name}
-                      {/* {!venue.categories.length && venue.categories[0].name} */}
                     </div>
                     <div id='img-map'>
                       <img
@@ -43,6 +39,7 @@ const MarkerWithInfo = ({venue, handleChange}) => {
                       >
                         Show details
                       </button>
+
                     </div>
                   </Fragment>
               </InfoWindow>
@@ -54,7 +51,7 @@ const MarkerWithInfo = ({venue, handleChange}) => {
 function GMap(props) {
     return (
         <GoogleMap
-        defaultZoom={16}
+        defaultZoom={14}
         defaultCenter={{lat: 25.761681, lng: -80.191788}}
         >
           {
@@ -78,7 +75,7 @@ export default function Map(props) {
           <MapWrapped
             googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyD1DrDBUd6GNL2EIBCxK-K0OjkTny8kbuA`}
             loadingElement={<div style={{ height: `100%` }} />}
-            containerElement={<div style={{ height: `100%`, width: '67vw' }} />}
+            containerElement={<div style={{ height: `100%` }} />}
             mapElement={<div style={{ height: `100%` }} />}
             venues={props.venues}
             handleChange={props.handleChange}
@@ -86,5 +83,4 @@ export default function Map(props) {
 
         </div>
       );
-
 }

@@ -18,6 +18,7 @@
     text-overflow: ellipsis;
     max-width: 210px;
 }
+
 #cat-map{
     text-align: left;
     font: Regular 16px Arial;
@@ -59,4 +60,3 @@
    margin-right: 5px!important;
 
 }
-

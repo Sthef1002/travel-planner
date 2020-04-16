@@ -15,9 +15,6 @@ function App() {
         <Route exact path='/' component={Home} />
         <Route path='/:placeholder/*' component={NavBar} />
         <Route path='/location/:query' component={Results} />
-        {/* <CardList /> */}
-        {/* <DateList /> */}
-        {/* <DateModal /> */}
       </div>
     </BrowserRouter>
  
