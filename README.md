@@ -1,6 +1,6 @@
 # Travel Planner App
 
-Clikc on the link to checkout the [Live version](https://sthef1002.github.io/travel-planner/)
+Right clikc on the link and select "Open Link in New Tab" to checkout the [Live version](https://sthef1002.github.io/travel-planner/)
 
 ## Project Description
 
