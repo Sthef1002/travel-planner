@@ -18,15 +18,15 @@ This application allows you to search for venues in Miami, FL. There are differe
 
 ### Prototype ([Link](https://xd.adobe.com/view/90ff7d9b-0d69-4393-521e-4964ed110cb2-e6ce/))
 
-## Screenshots
+## Prototype Screens
 ### Home Page
-![Home_Page](screenshots/Home_Page.png)
+![Home_Page](screens/Home_Page.png)
 
 ### Map Details
-![Map_List](screenshots/Map_List.png)
+![Map_Details](screens/Map_Details.png)
 
 ### Map List
-![Map_Details](screenshots/Map_Details.png)
+![Map_List](screens/Map_List.png)
 
 ### Getting Started
 * Clone or download the repository
@@ -41,13 +41,13 @@ yarn start
 ```
 ## Future Release
 ### Home Page
-![Home_Page_FR](screenshots/Home_Page_FR.png)
+![Home_Page_FR](screens/Home_Page_FR.png)
 
 ### Map Details
-![Map_Dates](screenshots/Map_Dates.png)
+![Map_Dates](screens/Map_Dates.png)
 
 ### Map List
-![Map_Details](screenshots/Map_Details_FR.png)
+![Map_Details](screens/Map_List_FR.png)
 
 ## The Team
 * Sthefany Azevedo [LinkedIn](https://www.linkedin.com/in/sthefany-azevedo-723b0b89/)
