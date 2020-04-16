@@ -26,6 +26,7 @@ export default class Results extends Component {
           ...KEYS,
           v: '20220403',
       }
+      
       fetch(`https://api.foursquare.com/v2/venues/${venueId}?` + new URLSearchParams(params))
         .then(res => res.json())
         .then(data => {
@@ -119,4 +120,4 @@ export default class Results extends Component {
             </Container>
         )
     }
-}
+  }
