@@ -21,6 +21,9 @@ class SelectionList extends Component {
             <h6 id='font'>
               Miami
             </h6>
+            <div id='placeholder'>
+              Let's start adding places!
+            </div>
           </div>
         <Col md={11}>
           {

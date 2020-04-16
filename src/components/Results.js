@@ -88,12 +88,12 @@ export default class Results extends Component {
                         path='/location/:query/modal'
                         render={ props => (
                           <Details
-                            {...props}
-                            venueDetails={this.state.venueDetails}
-                            changeSelections={this.changeSelections}
+                          {...props}
+                          venueDetails={this.state.venueDetails}
+                          changeSelections={this.changeSelections}
                           />
                         )}
-                      />
+                        />
                       {/* <Route path="/location/:query/modal/:venueId">
                         <Redirect to="/location/:query/modal" />
                       </Route> */}
