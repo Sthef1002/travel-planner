@@ -7,10 +7,6 @@ import './Results.css'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Route, Switch } from 'react-router-dom'
 const KEYS = {
-  // client_id: "PMHC2WA1VCBHVYOPPSJ0QSBYTLRF4PNJ04OWVWV0PZJ0QFIR",
-  // client_secret: "CULSZZ44YAEBOWBFGPB4BF5ISRXXSNYR0EE3JV3CNE2ZWHV0",
-  // client_id: "K2DOBAFKPW4UDFBWIGJM2EM2VFQNUIM3BU1ATQOCJ4WOGRDW",
-  // client_secret: "RB01AD1GD3RTE45S0SNLYQCASMMVN3SJHYBEHBZQM5IXGIZL",
   client_id: 'GD1U0GHJVRDG1HNUQMPZVIA0GFPV2TSATLU5BEXQDBT4T2LM',
   client_secret: 'PZXI0GPI45F00XFPDLHHSUN0EMFYZF4OWLW2FZA53IL2OWKR',
 }
@@ -30,6 +26,7 @@ export default class Results extends Component {
           ...KEYS,
           v: '20220403',
       }
+      
       fetch(`https://api.foursquare.com/v2/venues/${venueId}?` + new URLSearchParams(params))
         .then(res => res.json())
         .then(data => {
@@ -123,4 +120,4 @@ export default class Results extends Component {
             </Container>
         )
     }
-}
+  }
