@@ -23,9 +23,7 @@
     border: none;
     padding: 0px;
     margin-bottom: 20px;
-    margin-top: 20px;
-    
-    
+    margin-top: 20px;   
 }
 
 #add{
@@ -37,8 +35,6 @@
     /* margin-left: 20.6vw; */
     margin-bottom: 20px;
     margin-top: 20px;
-
-
 }
 
 #venue-img {
@@ -81,4 +77,3 @@
     margin-bottom: 5px;
     margin-top: 20px;
 }
-

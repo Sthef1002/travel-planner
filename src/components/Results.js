@@ -5,7 +5,7 @@ import Map from './Map'
 import Details from './Details'
 import './Results.css'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Route, Switch, Redirect } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 const KEYS = {
   // client_id: "PMHC2WA1VCBHVYOPPSJ0QSBYTLRF4PNJ04OWVWV0PZJ0QFIR",
   // client_secret: "CULSZZ44YAEBOWBFGPB4BF5ISRXXSNYR0EE3JV3CNE2ZWHV0",
@@ -94,9 +94,6 @@ export default class Results extends Component {
                           />
                         )}
                         />
-                      {/* <Route path="/location/:query/modal/:venueId">
-                        <Redirect to="/location/:query/modal" />
-                      </Route> */}
                       <Route
                         path='/location/:query'
                         render={ props => (
