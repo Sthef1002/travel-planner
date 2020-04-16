@@ -14,7 +14,7 @@ This application allows you to search for venues in Miami, FL. There are differe
 
 ### Other tools used
 * [Adobe Xd](https://xd.adobe.com/) - Prototype
-* [React | Font Awesome](https://fontawesome.com/how-to-use/on-the-web/using-with/react) - Icons
+* [React Font Awesome](https://fontawesome.com/how-to-use/on-the-web/using-with/react) - Icons
 
 ### Prototype ([Link](https://xd.adobe.com/view/90ff7d9b-0d69-4393-521e-4964ed110cb2-e6ce/))
 
