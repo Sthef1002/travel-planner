@@ -43,7 +43,7 @@ yarn start
 ### Home Page
 ![Home_Page_FR](screens/Home_Page_FR.png)
 
-### Map Details
+### Map Details with Date Modal
 ![Map_Dates](screens/Map_Dates.png)
 
 ### Map List
