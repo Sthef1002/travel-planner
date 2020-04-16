@@ -28,10 +28,6 @@ This application allows you to search for venues in Miami, FL. There are differe
 ### Map List
 ![Map_Details](screenshots/Map_Details.png)
 
-### `yarn start`
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
 ### Getting Started
 * Clone or download the repository
 * Then install all project dependencies
