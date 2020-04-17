@@ -4,7 +4,6 @@ import { Card, Row, Col } from 'react-bootstrap'
 import './SelectionList.css'
 import './PlaceholderAside.css'
 
-
 class SelectionList extends Component {
 
   render() {

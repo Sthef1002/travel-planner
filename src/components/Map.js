@@ -6,7 +6,6 @@ const MarkerWithInfo = ({venue, handleChange}) => {
   const [isShowing, setIsShowing] = useState(false)
   let googleImage = `https://maps.googleapis.com/maps/api/streetview?size=230x100&location=${venue.location.lat},${venue.location.lng}&fov=90&heading=235&pitch=10&key=AIzaSyDicFQoRWREO_gX1sTklPjE8Kjhni7qmQU`
   return(
-
       <Marker
           position={{lat: venue.location.lat, lng: venue.location.lng}}
           onClick={() => setIsShowing(true)}
